@@ -1,8 +1,18 @@
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
-export default function Dashboard() {
+export default async function Dashboard() {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    // Redirect unauthenticated users to the login page
+    redirect("/login");
+  }
+
   // This would typically fetch data from an API
   const projects = [
     { id: 1, name: "House Construction", type: "Building", progress: 60 },

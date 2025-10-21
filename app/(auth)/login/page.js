@@ -36,13 +36,7 @@ export default function Login() {
         password: info.password,
         redirect: false,
       });
-      // const res = await fetch("/api/auth", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(info),
-      // });
+     
 
       console.log("Response- ", res);
       if (res.error) {
