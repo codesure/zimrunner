@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       <div className="container mx-auto mt-10 px-4">
-        <div className="relative w-full h-[300px] mb-10">
+        <div className="relative w-full h-[300px] mb-5 ">
           <Image
             src="/zimrunnerhome.png?height=300&width=1200&text=Zimbabwe+Landscape"
             alt="Zimbabwe Landscape"
@@ -29,7 +29,7 @@ export default function Home() {
             </Button>
           </Link>
         </section>
-        <section className="mt-20 grid md:grid-cols-3 gap-8">
+        <section className="mt-10 grid md:grid-cols-3 gap-8">
           <div className="bg-yellow-400 p-6 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold text-black mb-4">Building Projects</h2>
             <p className="text-black">

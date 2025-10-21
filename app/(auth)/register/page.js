@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function Register() {
-  const [info, setInfo] = useState({ username: "", email: "", password: "" });
+  const [info, setInfo] = useState({ username: "", email: "", password: "" ,});
   const [error, setError] = useState("");
   const [pending, setPending] = useState(false);
 
@@ -34,18 +34,18 @@ export default function Register() {
 
       if (res.ok) {
         setPending(false);
-        const form = e.target;
-        form.reset();
-        router.push("/login");
+        // const form = e.target;
+        e.target.reset();
+        router.replace("/login");
         console.log("User Registered");
       } else {
         const errorData = await res.json();
-        setError(errorData.message);
+        setError(errorData?.message || "Registration failed");
         setPending(false);
       }
     } catch (error) {
       setPending(false);
-      setError("Something went wrong", error);
+      setError("Something went wrong" + error);
     }
   }
   console.log({ info });
@@ -105,9 +105,9 @@ export default function Register() {
           </div>
           {error && <span className="message">{error}</span>}
           <div className="flex justify-end gap-2">
-            <Link href="/" variant="outline">
-              Cancel
-            </Link>
+          <Button variant="outline" asChild>
+        <Link href="/">Cancel</Link>
+            </Button>
             <Button disabled={pending ? true : false} type="submit">
               {pending ? "Registering..." : "Register"}
             </Button>
