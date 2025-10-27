@@ -18,9 +18,9 @@ function Navbar() {
                     Home
                   </Button>
                 </Link>
-                <Link href="/projects">
+                <Link href="/dashboard">
                   <Button variant="ghost" className="text-white hover:text-yellow-400">
-                    Projects
+                    My Projects
                   </Button>
                 </Link>
                 <Link href="/featured">

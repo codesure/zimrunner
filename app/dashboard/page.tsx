@@ -9,9 +9,9 @@ export default async function Dashboard() {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    // Redirect unauthenticated users to the login page
-    redirect("/login");
+    redirect(`/login?callbackUrl=/dashboard`);
   }
+  
 
   // This would typically fetch data from an API
   const projects = [
