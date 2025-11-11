@@ -24,9 +24,9 @@ export default async function Dashboard() {
     <div className="min-h-screen bg-white">
       <header className="bg-black shadow-md">
         <div className="container mx-auto py-4 px-6 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-yellow-400">ZimRunner Dashboard</h1>
+          <h1 className="text-2xl font-bold text-yellow-400">Welcome <span className="underline">{session.user?.username}</span> ZimRunner Dashboard</h1>
           <Button variant="ghost" className="text-white hover:text-yellow-400">
-            Logout
+            Exit
           </Button>
         </div>
       </header>

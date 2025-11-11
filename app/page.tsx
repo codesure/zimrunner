@@ -16,7 +16,7 @@ export default function Home() {
             className="rounded-lg"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-white text-center">Manage Your Zimbabwe Projects from Anywhere</h1>
+            <h1 className="text-4xl font-bold text-white text-center">Manage Your Zimbabwean Projects from Anywhere</h1>
           </div>
         </div>
         <section className="text-center">
